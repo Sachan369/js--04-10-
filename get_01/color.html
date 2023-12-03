@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: #fff;
+        position: relative;
+      }
+      .main {
+        text-align: center;
+        position: absolute;
+      }
+      .button {
+        width: 100px;
+        padding: 20px;
+        margin: 20px;
+        border-style: solid;
+      }
+      .right {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        margin: 20px;
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="button" id="red" style="background-color: red">red</div>
+      <div class="button" id="blue" style="background-color: blue">blue</div>
+      <div class="button" id="green" style="background-color: green">green</div>
+      <div class="button" id="black" style="background-color: black">black</div>
+    </div>
+    <div class="right">hello</div>
+  </body>
+  <script>
+    console.log("hitesh")
+const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('.right');
+
+buttons.forEach(function (button) {
+  console.log(button);
+  button.addEventListener('click', function (e) {
+    console.log(e);
+    console.log(e.target);
+    if (e.target.id === 'red') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'blue') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'green') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'black') {
+      body.style.backgroundColor = e.target.id;
+    }
+    
+  });
+});
+
+
+  </script>
+</html>

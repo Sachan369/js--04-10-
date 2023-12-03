@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .time{
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div class="time"></div>
+</body>
+<script>
+    const time = document.querySelector(".time")
+    
+    setInterval(function(){
+        let date = new Date()
+       time.innerHTML = (date.toLocaleTimeString())
+    },1000)
+
+</script>
+</html>
